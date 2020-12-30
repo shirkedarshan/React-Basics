@@ -4,15 +4,22 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+function MyInfo(){
+  return (
+    <div>
+      <h1>Darshan  Shirke</h1>
+      <p>This is para about me</p>
+      <ul><b>
+        <li>Raigad</li>
+        <li>Rajgad</li>
+        <li>Jinji</li>
+        </b></ul>
+    </div>
+  )
+}
 ReactDOM.render(
   <React.StrictMode>
-    <h1>Hello world</h1>
-    <p>This is a para</p>
-    <ul>
-      <li>1</li>
-      <li>2</li>
-      <li>3</li>
-    </ul>
+    <MyInfo/>
   </React.StrictMode>,
   document.getElementById('root')
 );
