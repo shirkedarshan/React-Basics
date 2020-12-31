@@ -1,15 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
-import Footer from './Footer';
-import Nav from './Nav';
-import Main from './Main';
+import React from 'react';
 
 function App() {
   return (
     <div>
-      <Nav/>
-      <Main/>
-      <Footer/>
+      <input type="checkbox"/>
+      <p>Placeholder text here</p>
+
+      <input type="checkbox"/>
+      <p>Placeholder text here</p>
+
+      <input type="checkbox"/>
+      <p>Placeholder text here</p>
+
+      <input type="checkbox"/>
+      <p>Placeholder text here</p>
     </div>
   );
 }
