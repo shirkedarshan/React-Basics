@@ -5,6 +5,7 @@
 /.pnp
 .pnp.js
 selfInstructions.txt
+..eslintcache
 
 # testing
 /coverage
