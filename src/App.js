@@ -1,5 +1,5 @@
 import logo from './logo.svg';
-import './App.css';
+import './App.css'; //css
 import Footer from './Footer';
 import Nav from './Nav';
 import Main from './Main';
@@ -7,7 +7,7 @@ import Main from './Main';
 function App() {
   return (
     <div>
-      <Nav/>
+      <Nav/> // check nav.js
       <Main/>
       <Footer/>
     </div>
