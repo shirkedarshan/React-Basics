@@ -1,20 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
-import Joke from "./Joke"
-import jokesData from "./jokesData"
-
+import React from "react"
+import productsData from "./vschoolProducts"
+import Product from "./Product"
 function App() {
-  const jokeComponents = jokesData.map(joke => {
+  const productComponent = productsData.map( data => {
     return(
-      <Joke key={joke.id} question={joke.question} punchLine={joke.punchLine}/>
+      <Product key="id" name={data.name} price={data.price} description={data.description} />
     )
   })
-
   return (
     <div>
-      {jokeComponents}
+        {productComponent}
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
