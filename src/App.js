@@ -1,17 +1,22 @@
 import React from "react"
-import productsData from "./vschoolProducts"
-import Product from "./Product"
-function App() {
-  const productComponent = productsData.map( data => {
+
+// function App() {
+//   return (
+//     <div>
+//       <p>Code goes here</p>
+//     </div>
+//   )
+// }
+
+class App extends React.Component {
+  render(){
     return(
-      <Product key="id" name={data.name} price={data.price} description={data.description} />
-    )
-  })
-  return (
-    <div>
-        {productComponent}
+      <div>
+        <p>Code goes here</p> 
+        <h1>{this.props.whatever}</h1>
     </div>
-  )
+    )
+  }
 }
 
 export default App
