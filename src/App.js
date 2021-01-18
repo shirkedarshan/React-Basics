@@ -15,18 +15,31 @@ class App extends React.Component {
     }
     
     render() {
-        let wordDisplay
-        if (this.state.isLoggedIn) {
-            wordDisplay = "in"
-        } else {
-            wordDisplay = "out"
-        }
         return (
             <div>
-                <h1>You are currently logged {wordDisplay}</h1>
+                <img src="https://www.fillmurray.com/200/100" onClick = { () => console.log("End")}/>
             </div>
         )
     }
 }
+// or we can use function as 
+// 
+// function handleClick() {
+//     console.log("I was clicked")
+// }
+
+// // https://reactjs.org/docs/events.html#supported-events
+
+// function App() {
+//     return (
+//         <div>
+//             <img onMouseOver={() => console.log("Hovered!")} src="https://www.fillmurray.com/200/100"/>
+//             <br />
+//             <br />
+//             <button onClick={handleClick}>Click me</button>
+//         </div>
+//     )
+// }
+
 
 export default App
