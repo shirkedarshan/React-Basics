@@ -1,15 +1,10 @@
-import React, {useState} from "react"
+import React, {useState,useEffect} from "react"
+import randomcolor from "randomcolor"
 
 function App() {
 
-    const value = useState("200")
-    const data = {
-        name:"abc",
-        age:"11"
-    }
-    const {name,age} = data
-
     const [count , setCount] = useState(0)
+    const [color , setColor] = useState('')
 
     function increment(){
         setCount(Hot => Hot + 1)
@@ -19,14 +14,24 @@ function App() {
         setCount(prevCount => prevCount - 1)
     }
 
-    console.log(data,count)
+    useEffect(() => {
+        const intervalId = setInterval(() => {
+            setCount(prevCount => prevCount + 1)
+        }, 10000)
+        return () => {
+            clearInterval(intervalId)
+        }
+    }, [])
+
+    useEffect( () => {
+        setColor(randomcolor())
+    },[count])
+
+    console.log(count,color)
 
     return (
         <div>
-            <h2>Part 1</h2>
-            {value}
-            <h2>Part 2</h2>
-            <h1>{count}</h1>
+            <h1 style={{color:color}}>{count}</h1>
             <button onClick={increment}>Increment</button>
             <button onClick={decrement}>Decrement</button>
         </div>
